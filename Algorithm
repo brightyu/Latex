@@ -1,4 +1,6 @@
-\usepackage[ruled]{algorithm2e}
+\usepackage[ruled]{algorithm2e}                  %算法排版样式1
+%\usepackage[ruled,vlined]{algorithm2e}          %算法排版样式2
+%\usepackage[linesnumbered,boxed]{algorithm2e}   %算法排版样式3
 
 \begin{algorithm}[H]
 
