@@ -1,0 +1,31 @@
+\usepackage{makecell}
+\usepackage{booktabs}
+
+\usepackage{threeparttable}
+
+\begin{table}[htbp] 
+	\centering\small
+	\begin{threeparttable}
+		\caption{\label{tab:results}Effect of Trade Openness on Environment (Air Pollution)}
+		\begin{tabular}{lccc}
+			\toprule & NO$_2$ & SO$_2$ & PM \\ 
+			\midrule $\ln(y/pop)$ & 408.74* & 287.25* & 566.65 \\ 
+			& (121.79) & (118.81) & (336.19) \\ 
+			$\ln(y/pop)^2$ & $-$22.85* & $-$16.58* & $-$35.57** \\
+			& (6.90) & (6.78) & (19.06) \\
+			$(X+M)/Y$ & $-$.29** & $-$.31* & $-$.37 \\
+			& (.17) & (.08) & (.34) \\ 
+			$Polity$ & $-$3.20* & $-$6.58* & $-$6.70** \\
+			& (1.47) & (2.05) & (3.42) \\
+			$\ln(LandArea/pop)$ & $-$5.94 & $-$2.92* & $-$13.02* \\
+			& (5.93) & (1.39) & (6.29) \\ Obs. & 36 & 41 & 38 \\ 
+			$R^2$ & 0.16 & 0.68 & 0.62 \\
+			\bottomrule 
+		\end{tabular} 
+		\small Note: Robust standard errors in parentheses. Intercept included but not reported. 
+			\begin{tablenotes} 
+				\item[*] significant at 5\% level 
+				\item[**] significant at 10\% level
+			\end{tablenotes}
+	\end{threeparttable} 
+\end{table}
