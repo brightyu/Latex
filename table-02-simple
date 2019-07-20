@@ -1,0 +1,24 @@
+\usepackage{makecell}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+
+\begin{tabular}[t]{l|c} 
+	\hline
+	1 & 2 \\
+	\hline
+	3 & 4 \\
+	5 & 6 \\
+	7 & 8 \\
+	\hline
+\end{tabular}
+
+\begin{table}[htbp] 
+	\caption{\label{tab:test}xxxxxxxxx} 
+	\begin{tabular}{lcl} 
+		\toprule xx & xx & xx\\ 
+		\midrule xx & 32 & xx\\ 
+		xx & 12 & xx\\ 
+		xx & 24 & xx\\ 
+		\bottomrule 
+	\end{tabular} 
+\end{table}
