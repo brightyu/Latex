@@ -52,3 +52,5 @@
     return $con(r_i)$\; 
 	
 \end{algorithm}
+
+参考：https://www.cnblogs.com/tsingke/p/5833221.html
