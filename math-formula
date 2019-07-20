@@ -1,0 +1,91 @@
+\usepackage{amsmath}
+
+
+\indent A1
+\begin{align}
+	\begin{bmatrix}\tilde
+		{\Omega}_{11}P^{-1}QW&
+		Q^T{E_{Ai}}^T&
+		P^{-1}(E_{Bi}K_j)^T&
+		P^{-1}{E_{Aj}}^T&
+		P^{-1}(E_{Bj}K_i)^T\\
+		\star & a & 0 & 0 & 0\\
+		\star & \star & c & 0 & 0\\
+		\star & \star & \star & c & 0\\
+		\star & \star & \star &\star & d
+	\end{bmatrix}\nonumber\\<0
+\end{align}
+
+\indent A2
+\begin{align}
+	\begin{bmatrix}
+		\begin{smallmatrix}\tilde
+			{\Omega}_{11}P^{-1}QW
+			&Q^T{E_{Ai}}^T
+			&P^{-1}(E_{Bi}K_j)^T
+			&P^{-1}{E_{Aj}}^T
+			&P^{-1}(E_{Bj}K_i)^T\\
+			\star&a&0&0&0\\
+			\star&\star&c&0&0\\
+			\star&\star&\star&c&0\\
+			\star&\star&\star&\star&d
+		\end{smallmatrix}
+	\end{bmatrix}\nonumber\\<0
+\end{align}
+
+\indent A3
+\begin{align}
+	\setlength{\arraycolsep}{0.2pt}
+	\begin{bmatrix}\tilde
+		{\Omega}_{11}P^{-1}QW
+		&Q^T{E_{Ai}}^T
+		&P^{-1}(E_{Bi}K_j)^T
+		&P^{-1}{E_{Aj}}^T
+		&P^{-1}(E_{Bj}K_i)^T\\
+		\star&a&0&0&0\\
+		\star&\star&c&0&0\\
+		\star&\star&\star&c&0\\
+		\star&\star&\star&\star&d
+	\end{bmatrix}\nonumber\\<0
+\end{align}
+
+\indent A4
+\begin{align}
+	\setlength{\arraycolsep}{6pt}
+	\begin{bmatrix}\tilde
+		{\Omega}_{11}P^{-1}QW
+		&Q^T{E_{Ai}}^T
+		&P^{-1}(E_{Bi}K_j)^T
+		&P^{-1}{E_{Aj}}^T
+		&P^{-1}(E_{Bj}K_i)^T\\
+		\star&a&0&0&0\\
+		\star&\star&c&0&0\\
+		\star&\star&\star&c&0\\
+		\star&\star&\star&\star&d
+	\end{bmatrix}\nonumber\\<0
+\end{align}
+
+\indent A5
+\begin{multline} 
+    \left[
+    	\begin{array}{ccc}\tilde
+    		{\Omega}_{11}P^{-1}QW
+    		&Q^T{E_{Ai}}^T
+    		&P^{-1}(E_{Bi}K_j)^T\\
+    		\star&a&0\\
+    		\star&\star&c\\
+    		\star&\star&\star\\
+    		\star&\star&\star\\
+    	\end{array}
+    	\right.\\
+    	\left.
+    	\begin{array}{cc}
+    		P^{-1}{E_{Aj}}^T
+    		&P^{-1}(E_{Bj}K_i)^T\\
+    		0&0\\
+    		0&0\\
+    		c&0\\
+    		\star&d\\
+    	\end{array}
+    \right]<0
+\end{multline}
