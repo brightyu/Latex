@@ -1,0 +1,19 @@
+\documentclass[border=2mm]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+% \fill (canvas cs:x=2cm, y=1.5cm) circle (2pt);
+% \fill (2cm, 1.5cm) circle (2pt);
+
+
+\draw (0, 0) grid (3, 3);
+\fill (canvas polar cs:angle=45, radius=2cm) circle (2pt);
+% \fill (45:2cm) circle (2pt);
+
+
+\end{tikzpicture}
+
+\end{document}
