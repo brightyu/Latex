@@ -1,0 +1,13 @@
+%\documentclass[tikz, border=2mm]{standalone} 
+\documentclass[tikz]{standalone}
+\usepackage{tikz} 
+
+\begin{document} 
+
+\begin{tikzpicture}[axisline/.style={very thick, -stealth}]  
+    \draw[axisline] (0,0,0)--(1,0,0) node[right]{$x$}; 
+    \draw[axisline] (0,0,0)--(0,1,0) node[above]{$y$};
+    \draw[axisline] (0,0,0)--(0,0,1) node[below left]{$z$};
+\end{tikzpicture}   
+
+\end{document}
