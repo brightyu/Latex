@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+	% 画网格 x in [0, 2]; y in [0, 3]. 
+	% [help lines] -> 浅色背景线 
+	\draw[help lines] (0, 0) grid (2, 3); 
+	
+	\draw (0, 0) -- (1, 2) -- (2, 3) -- (1, 0);
+	\draw (0, 3) -- (1.5, 0.5);
+\end{tikzpicture}
+
+% [scale=3] x和y扩大3倍 = 图像等效扩大三倍
+\begin{tikzpicture}[scale=3]   
+	% 画网格 x in [0, 2]; y in [0, 3]. 
+	% [help lines] -> 浅色背景线 
+	\draw[help lines] (0, 0) grid (2, 3); 
+	
+	\draw (0, 0) -- (1, 2) -- (2, 3) -- (1, 0);
+	\draw (0, 3) -- (1.5, 0.5);
+\end{tikzpicture}
+
+% [xscale=2.5, yscale=0.5] 控制轴伸缩
+\begin{tikzpicture}[xscale=2.5, yscale=0.5] 
+	% 画网格 x in [0, 2]; y in [0, 3]. 
+	% [help lines] -> 浅色背景线 
+	\draw[help lines] (0, 0) grid (2, 3); 
+	
+	\draw (0, 0) -- (1, 2) -- (2, 3) -- (1, 0);
+	\draw (0, 3) -- (1.5, 0.5);
+\end{tikzpicture}
+
+\end{document}
