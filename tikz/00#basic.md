@@ -14,3 +14,9 @@
 
 - 经常使用
 - 在生活中应用
+
+# 案例
+
+[github示例](https://github.com/xinychen/awesome-latex-drawing/blob/master/README.md)
+
+[应用](https://tensor-learning.blogspot.com/2019/07/how-to-draw-graphical-illustrations-for.html)
