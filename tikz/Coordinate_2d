@@ -1,0 +1,34 @@
+\documentclass[varwidth=true, border=2pt]{standalone}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        legend pos=south west,
+        axis x line=middle,
+        axis y line=middle,
+        grid = major,
+        %width=9cm,
+        %height=4.5cm,
+        grid style={dashed, gray!30},
+        xmin=-1,     % start the diagram at this x-coordinate
+        xmax= 6,    % end   the diagram at this x-coordinate
+        ymin=-0.25,     % start the diagram at this y-coordinate
+        ymax= 2.25,   % end   the diagram at this y-coordinate
+        axis background/.style={fill=white},
+        xlabel=$x$,
+        ylabel=$y$,
+        %xticklabels={-2,-1.6,...,7},
+        %yticklabels={-8,-7,...,8},
+        tick align=outside,
+        minor tick num=-3,
+        enlargelimits=true,
+        tension=0.08]
+    \end{axis}
+\end{tikzpicture}
+\end{document}
