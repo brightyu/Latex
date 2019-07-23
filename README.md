@@ -26,6 +26,25 @@
 同时引用两篇：`\cite{KDE,Another}`注意逗号前后都不要有空格，不然会报错。
 
 # 有用的知识
-[latex-example](https://github.com/MartinThoma/LaTeX-examples)
+
+ - [latex-example](https://github.com/MartinThoma/LaTeX-examples)
+  
+ - [Latex引用参考文献-BibTex的使用](https://blog.csdn.net/caiandyong/article/details/70258670)
+  
+  
+ - [LaTeX 科技排版 ](http://math.ecnu.edu.cn/~latex/)
+  
+  
+ - [Using the LaTeX Resume Templates](http://rpi.edu/dept/arc/training/latex/resumes/)
+  
+  
+ - [LaTeX Templates](http://www.latextemplates.com/template/awesome-resume-cv)
+  
+  
+ - [LaTeX/数学公式](https://zh.wikibooks.org/zh-cn/LaTeX/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F)
+  
+  
+ - [Latex基本表格绘制](https://blog.csdn.net/JueChenYi/article/details/77116011)
+
 
 

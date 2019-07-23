@@ -1,0 +1,20 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\begin{document}
+
+\begin{figure}
+\centering     %%% not \center
+\subfigure[Figure A]{\label{fig:a}\includegraphics[width=60mm]{01.png}}
+\subfigure[Figure B]{\label{fig:b}\includegraphics[width=60mm]{02.png}}\\
+\subfigure[Figure C]{\label{fig:c}\includegraphics[width=60mm]{03.png}}
+\caption{my caption}
+\end{figure}
+
+\end{document}
+
+
+
+
