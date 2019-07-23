@@ -25,7 +25,7 @@
 在你的正文中要引用他的话，就用 `\cite{KDE}`。 
 同时引用两篇：`\cite{KDE,Another}`注意逗号前后都不要有空格，不然会报错。
 
-
-
+# 有用的知识
+[latex-example](https://github.com/MartinThoma/LaTeX-examples)
 
 
