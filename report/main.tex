@@ -1,0 +1,47 @@
+\input{selfstyle}    % 输入导言区的相关设置
+\input{selfdef}      % 导入自定义宏设置
+
+\begin{document}
+
+\bibliographystyle{plain} 
+% 设置参考文献类型：可选参数（plain, unsrt, alpha, abbrv缩写格式）
+% unsrt：参考文献的条目的编号是按照引用的顺序，而不是按照作者的字母顺序
+% alpha：参考文献的条目的编号基于作者名字和出版年份的顺序
+
+
+
+\section{Introduction}
+
+This is a good paper \cite{aa}.
+
+$$e^{i\pi} + 1 = 0$$
+
+
+
+
+
+\bibliography{ref} 
+% 插入参考文献的位置 
+%@article{name1,
+%author = {作者, 多个作者用 and 连接},
+%title = {标题},
+%journal = {期刊名},
+%volume = {卷20},
+%number = {页码},
+%year = {年份},
+%abstract = {摘要, 这个主要是引用的时候自己参考的, 这一行不是必须的}
+%}
+
+%@book{name2,
+%author ="作者",
+%year="年份2008",
+%title="书名",
+%publisher ="出版社名称"
+%}
+%
+%可选参考文献类型：article, book, booklet, conference, inbook, incollection, 
+%inproceedings，manual, misc, mastersthesis, phdthesis, 
+%proceedings, techreport, unpublished
+\end{document}
+
+

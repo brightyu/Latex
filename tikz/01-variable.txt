@@ -1,0 +1,63 @@
+Define a variable in TikZ
+https://tex.stackovernet.com/cn/q/3864
+
+% ---------01example-----------------
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+\def \x{2} % 公式： \def \varname{initialValue}
+\def \y{3}
+	\begin{tikzpicture} 
+		\draw (\x, \y)--(\y, \x);
+	\end{tikzpicture}
+\end{document}
+
+% ---------02example-----------------
+% Use \pgfmathsetmacro{varname}{varvalue} 
+% inside a tikzpicture environment.
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}
+		%VARIABLES
+		\pgfmathsetmacro{\Length}{1}
+		\pgfmathsetmacro{\Width}{2}
+		\pgfmathsetmacro{\Height}{3}
+		\draw (0, 0) rectangle (\Length, \Width);
+		% Now use \PHI anywhere you want -15 to appear,
+		% can also be used in calculations like 2*\PHI
+	\end{tikzpicture}
+\end{document}
+
+% ---------03example-----------------
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{math} %needed tikz library
+
+\begin{document}
+    \begin{tikzpicture}
+    %Variables must be declared in a tikzmath environment but
+    % can be used outside
+		\tikzmath{\x1 = 1; \y1 =1; \x2 = \x1 + 1; \y2 =\y1 +3; } 
+		\draw[->] (\x1, \y1)--(\x2, \y2);
+    \end{tikzpicture}
+\end{document}
+
+% ---------04example-----------------
+
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture} 
+
+\coordinate (A) at (2,3);
+\coordinate (B) at (4,5);
+\draw[->] (A)--(B);
+
+\end{tikzpicture}
+
+\end{document}
+% ---------end-----------------
