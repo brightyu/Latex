@@ -1,0 +1,7 @@
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.5]
+画图语言描述
+\end{tikzpicture}
+\caption{\label{fig:xxx}标题内容}
+\end{figure}
