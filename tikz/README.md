@@ -1,4 +1,9 @@
 # 文档编号含义
+
+## TiKz的学习方法（Learning methods）
+
+命令的一般结构是`command [attribte] path`，其中`command`是某条命令，指明了做什么(what)；`attribute`是绘图风格，指明了如何做(how)；`path`是一条路径，指明了在哪儿做(where)。
+
 ## 01-variable
 
 在latex中定义变量，方便引用与修改。
