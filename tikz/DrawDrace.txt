@@ -1,0 +1,30 @@
+大括号画法1:
+\documentclass[tikz,border=0pt,10pt]{standalone}
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\begin{document}
+\begin{tikzpicture}
+\draw[decorate,decoration={calligraphic brace,amplitude=4mm},ultra thick] (0,0) -- (8,0);
+\draw[decorate,decoration={calligraphic brace,amplitude=2mm},ultra thick] (0,1) -- (8,1);
+\draw[decorate,decoration={calligraphic brace,amplitude=6mm},ultra thick] (0,2) -- (8,2);
+\end{tikzpicture}
+\end{document}
+
+大括号画法2
+\documentclass[tikz,border=0pt,10pt]{standalone}
+\usetikzlibrary{decorations.pathreplacing}
+\begin{document}
+\begin{tikzpicture}
+\node (a)  at (0,0) {A};
+\node (b)  at (2,1) {B};
+\draw (a) -- (b);
+\draw[decorate, decoration=brace] (a) -- (b);
+\draw[decorate, decoration={brace,mirror},red] (a) -- (b);
+\draw[decorate, decoration={brace,mirror,raise=5pt}, blue] (a) -- (b);
+\end{tikzpicture}
+\end{document}
+
+单词：
+ca lli gra phi c
+relating to calligraphy. "a calligraphic pen"
+
+来源 https://www.520mwx.com/view/35688
