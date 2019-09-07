@@ -1,0 +1,69 @@
+Latex插图
+命令是\includegraphics[选项]{文件}
+\includegraphics[width=12pt]{recycle.eps} 
+\includegraphics[width=12pt]{illusion.eps}。
+
+下面的命令将以 file.eps  的自然大小插入到 LATEX 文档中：
+
+\documentclass{article}
+\usepackage{graphicx}
+\begin{document}
+\includegraphics{file.eps}
+\end{document}
+
+includegraphics Options
+height	图形的高度（可为任何 TEX 度量单位）。
+totalheight	图形的全部高度，可为任何 TEX 度量单位
+width	图形的宽度（可为任何 TEX 度量单位）。
+scale	图形的缩放因子，设定 scale=2 会使 插入的图形的大小为其自然大小的两倍。
+angle	设定旋转的角度，以度为单位，顺时钟方向为正。
+origin	origin 指定图形绕那一点旋转，缺省 是图形的参考点（12/95 增加）。初始点有可能与 第 8.3节的 \rotatebox 命令中的一样。 比如 origin=c 将使图形绕它的中心旋转。
+bb	设定 BoundingBox 的值。  bb=10 20 100 200 设定 BoundingBox 的左下角在  (10,20)，右上角在 (100,200)。因为  \includegraphics 会自动从 EPS 文件中读入 BoundingBox 行 所给的值，所以一般不使用 bb 这个选项。但它在 EPS 文件 中的 BoundingBox 丢失或出错时还是很有用的。
+
+includegraphics Cropping Options
+viewpoint	指定图形可以被看到的部分。如同 BoundingBox 一样， 这是一个由四个数字，左下角和右上角的坐标所确定的区域。 这里的坐标是相对于 BoundingBox 的左下角的（6/95 增加）。 例如，如果图形的 BoundingBox 的值是 50 50 410 302， viewpoint=50 50 122 122  将显示以图形的左下角为左下角的一英寸大小的区域。 而 viewpoint=338 230 410 302 则会显示以图形的 右上角为右上角的一英寸大小的区域。 必须使用 clip 选项（见表 7.3） 来阻止显示视图以外的图形部分 。
+trim	指定图形可以被看到的部分的另一选项。所给出的四个数字 分别代表了从左、下、右、上被截去的值。正数代表从此方向 截去的大小，而负数则代表从此方向加上的大小。
+ 
+includegraphics Boolean Options
+noclip	（缺省选项）显示整个的图形，即使有些部分在视图之外。
+clip	当使用 clip 时，将不显示图形在视图之外的部分。
+draft	当使用 draft 选项时，将只显示图形的 BoundingBox  和文件名，这使得显示和打印文档的速度加快。如果使用draft宏包选项，\usepackage[draft]{graphicx} 会导致文档中的所有图形都被以草稿（draft）方式插入。
+final	（缺省选项，除非使用\usepackage[draft]{graphicx}）  final 选项使得图形被显示，经常用来覆盖\usepackage[draft]{graphicx}
+keepaspectratio	在没有设定 keepaspectratio 选项时， 给定图形的高度（全部高度）和宽度会导致图形被不对称缩放来满足所设定的高和宽。在设定 keepaspectratio选项后，给定图形的高度（全部高度）和宽度时，图形会保持原有的宽高比例，尽可能使得图形满足所设定的高和宽，但是图形不会超出其中任一个。
+如果加入的图形文件没有指明扩展名，那么 \includegraphics 会根据  \DeclareGraphicsExtensions 的扩展名列表自动为它加上扩展名（见第  9.1 节）。由于缺省的扩展名列表不包括空的扩展名，  \includegraphics{file} 不会读入 file。除非空的扩展名 已被加到扩展名列表中。 命令
+
+\includegraphics[width=3in]{file.eps} 
+将 file.eps 插入文档并且它的宽度被缩放到 3 英寸，高度也会 按相应的比例缩放。如果用 \textwidth 或 \em 等的函数来 指定宽度，而不是用像 3 英寸这样的固定尺寸，将会使你的 LATEX 文 档更具通用性。例如：
+
+\includegraphics[width=\textwidth]{graphics.eps} 
+将所插入图形缩放到和文本行的宽度一样宽。而下面的命令
+
+\includegraphics[width=0.80\textwidth]{graphics.eps} 
+使得插入图形的宽度为文本行宽的 80%。当与 calc 宏包配合使用 时，下面的命令可令图形的宽度比文本行宽少 2 英寸：
+
+\includegraphics[width=\textwidth-2.0in]{graphics.eps} 
+to （需要 graphicx 12/95 或以后的 版本。） 下面是一些使用 \includegraphics 命令来插入图形的例子。这里为方便起见，定义 \HR 如下：
+
+\newcommand{\HR}{\rule{1em}{0.4pt}} 
+
+比较以下使用 scale,width,height,angle  以及 keepaspectratio 选项及其不同的顺序所得到的不同效果。
+\includegraphics[scale=.5]{w.eps}	
+\includegraphics[scale=.5]{w.eps} 
+\includegraphics[width=10mm]{w.eps}
+\includegraphics[width=10mm]{w.eps}
+\includegraphics[height=20mm,width=30mm]{w.eps}
+\includegraphics[height=20mm,width=30mm]{w.eps}
+\includegraphics[height=20mm,width=30mm, keepaspectratio]{w.eps}}
+\includegraphics [height=20mm,width=30mm,keepaspectratio]{w.eps}}
+\includegraphics[angle=-45]{w.eps}}
+\includegraphics[angle=-45]{w.eps}}
+\includegraphics[angle=-45,width=30mm] {w.eps}
+\includegraphics[angle=-45,width=30mm]{w.eps}
+\includegraphics[width=30mm,angle=-45]{w.eps}}
+\includegraphics[width=30mm,angle=-45]{w.eps}}
+\includegraphics[angle=-60,totalheight=15mm]{w.eps}}
+\includegraphics[angle=-60,totalheight=15mm]{w.eps}}
+\includegraphics[angle=-60,totalheight=20mm,width=30mm]{w.eps}
+\includegraphics[angle=-60,totalheight=20mm,width=30mm]{w.eps}}
+\includegraphics[angle=-60,totalheight=20mm,width=30mm,keepaspectratio]{w.eps}}
+\includegraphics[angle=-60,totalheight=20mm,width=30mm,keepaspectratio]{w.eps}}
