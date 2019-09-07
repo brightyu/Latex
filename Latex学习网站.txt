@@ -11,3 +11,12 @@ https://www.cnblogs.com/sylvanas2012/archive/2013/05/28/3102880.html
 
 4. LaTeX结构化写作
 https://i.linuxtoy.org/docs/guide/ch29s04.html
+
+5. 论文格式排版你真的做对了吗? 常用格式及其LaTeX书写方法介绍
+https://zhuanlan.zhihu.com/p/29587837
+
+6. Latex中插入多张图片，实现并排排列或者多行多列排列
+https://blog.csdn.net/a6822342/article/details/80533135
+
+7. LaTeX划线和各种强调符号包
+http://texdoc.net/texmf-dist/doc/generic/ulem/ulem.pdf
