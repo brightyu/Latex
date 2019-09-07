@@ -1,0 +1,13 @@
+1. 使用LaTeX写简历
+http://rpi.edu/dept/arc/training/latex/resumes/
+http://www.latextemplates.com/
+http://www.latextemplates.com/cat/curricula-vitae
+
+2. LaTeX/数学公式
+https://zh.wikibooks.org/zh-cn/LaTeX/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F
+
+3. LaTeX常用总结
+https://www.cnblogs.com/sylvanas2012/archive/2013/05/28/3102880.html
+
+4. LaTeX结构化写作
+https://i.linuxtoy.org/docs/guide/ch29s04.html
