@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\node (a) at (-1, -2) {a};
+\node (b) at (1, -2) {b};
+\node (c) at (2, -1) {c};
+\node (d) at (2, 1) {d};
+\node (e) at (1, 2) {e};
+\node (f) at (-1, 2) {f};
+\node (g) at (-2, 1) {g};
+\node (h) at (-2, -1) {h};
+
+\foreach \x/\y in {a/b, b/c, c/d, d/e, e/f, f/g, g/h, h/a}
+ \draw[->] (\x) -- (\y)node[midway, fill=red!25]{\x--\y};
+\end{tikzpicture}
+
+\end{document}
