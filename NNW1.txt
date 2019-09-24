@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\pagestyle{empty}
+\def\layersep{2.5cm}
+\begin{tikzpicture}[shorten >=1pt,->,draw=black!50, node distance=\layersep]
+
+    \tikzstyle{every pin edge}=[<-,shorten <=1pt]
+    \tikzstyle{neuron}=[circle,fill=black!25,minimum size=17pt,inner sep=0pt]
+    \tikzstyle{input neuron}=[neuron, fill=green!50];
+    \tikzstyle{output neuron}=[neuron, fill=red!50];
+    \tikzstyle{hidden neuron}=[neuron, fill=blue!50];
+    \tikzstyle{annot} = [text width=4em, text centered]
+
+    % Draw the input layer nodes
+    \foreach \name/\y in {1/1, 2/2}
+        \node[input neuron, pin=left:Input \#\y](I-\name) at (0, -\y){};
+        
+    % The 1 layer
+    \foreach \name/\y in {1,...,4}
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \path[yshift=1cm]node[hidden neuron](H1-\name) at (\layersep,-\y cm) {};
+        
+    % The 2 layer
+    \foreach \name/\y in {1,...,4}
+        \path[yshift=1cm]node[hidden neuron](H2-\name) at (2*\layersep,-\y cm) {};
+        
+        
+    \foreach \name/\y in {1}
+        \path[yshift=-0.5cm]node[output neuron](O-\name) at (3*\layersep,-\y cm) {};    
+    
+    % \node[output neuron, pin={[pin edge={->}]right:Output}] (O) {};
+    
+    \foreach \source in {1,2}
+        \foreach \dest in {1,...,4}
+            \path (I-\source) edge (H1-\dest);
+    
+    \foreach \source in {1,...,4}
+        \foreach \dest in {1,...,4}
+            \path (H1-\source) edge (H2-\dest);
+    
+    
+    \foreach \source in {1,...,4}
+        \foreach \dest in {1}
+            \path (H2-\source) edge (O-\dest);
+
+    
+     % Annotate the layers
+    \node[annot,above of=H1-1, node distance=1cm] (h1) {Hidden layer 1};
+    \node[annot,above of=H2-1, node distance=1cm] (h2) {Hidden layer 2};    
+    \node[annot,left of=h1] {Input layer};
+    \node[annot,right of=h2] {Output layer};   
+    
+    
+    
+    
+    
+\end{tikzpicture}
+
+\end{document}
